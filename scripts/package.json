@@ -1,0 +1,44 @@
+{
+  "name": "zombies_test",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "ethers": "^5.4.7",
+    "hardhat": "^2.6.5",
+    "keccak256": "^1.0.3",
+    "web-vitals": "^1.1.2",
+    "web3": "^1.6.0",
+    "web3-utils": "^1.6.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "serve": "node ./scripts/server.js",
+    "eject": "react-scripts eject",
+    "lottery": "node ./scripts/lottery.js",
+    "autoPurchase": "node ./scripts/autoPurchase.js"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "ethereum-waffle": "^3.4.0"
+  }
+}
