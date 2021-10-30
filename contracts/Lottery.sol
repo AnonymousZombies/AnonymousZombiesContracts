@@ -128,8 +128,6 @@ contract Lottery is Ownable {
         if (silverPrizeWinnersProof == proof) {
             silverPrizeWinnersVerified = true;
         }
-
-        
     }
 
     function checkSilverPrizeWinner(address addr) public view returns (bool) {
@@ -154,6 +152,7 @@ contract Lottery is Ownable {
     }
 
     function setDiamondPrizeTokenId(uint256 tokenId) public onlyOwner {
+        tokenPrizeStatus[tokenId] = 1;
         diamondPrizeTokenId = tokenId;
     }
 
@@ -167,7 +166,6 @@ contract Lottery is Ownable {
         tokenPrizeStatus[tokenId] = 2;
     }
 
-    //
     function claimGoldPrize(uint256 tokenId) public {
         require(goldPrizeWinnersVerified, "Gold prize winners unverified");
         require(IAZ(_azAddr).ownerOf(tokenId) == _msgSender(), "Not token holder");
